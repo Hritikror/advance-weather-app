@@ -1,0 +1,55 @@
+.header {
+    width: 120vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(252, 238, 217);
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 0 0 30px;
+
+}
+
+.header-right {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 100px 0 0;
+}
+
+.temperature {
+    font-family: 'Cochin';
+    font-size: 7em;
+}
+
+.today-date {
+    font-family: cursive;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.weather-icon {
+    font-family: cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px 0 10px 0;
+}
+
+.weather-icon img {
+    width: 25px;
+}
+
+.city {
+    margin: 0 0 10px 20px;
+    font-size: 1.5em;
+    position: relative;
+    left: 100px;
+}
