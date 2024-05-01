@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import './Search.css'
 import { AsyncPaginate } from 'react-select-async-paginate'
 import fetchCities from '../../misc/fetchCities'
-import WaetherDataContext from './../../misc/Context'
+import {CONTEXT} from './../../misc/Context'
 
 const Search = () => {
   
@@ -12,7 +12,7 @@ const Search = () => {
   //     <input placeholder='Search City...'/>
   //   </div>
   // )
-  const {settingUpWeatherData, searchValue, setSearchValue } = useContext(WaetherDataContext);
+  const {settingUpWeatherData, searchValue, setSearchValue } = useContext(CONTEXT);
 
   async function loadOptions(enteredData) {
     //console.log(enteredData)

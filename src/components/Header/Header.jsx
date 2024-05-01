@@ -4,12 +4,12 @@ import windPng from "./../../assets/icons/wind1.png";
 import cloudPng from "./../../assets/icons/cloud.png";
 import moisturePng from "./../../assets/icons/moisture.png";
 import day_nightPng from "./../../assets/icons/day_night.png";
-import WaetherDataContext from "./../../misc/Context";
+import {CONTEXT} from "./../../misc/Context";
 import DateUtil from "../../misc/DateUtil";
 
 const Header = () => {
 
-  const {weatherData} = useContext(WaetherDataContext);
+  const {weatherData} = useContext(CONTEXT);
   const {city, temperature, wind, rain, humidity} = weatherData;
 
   return (

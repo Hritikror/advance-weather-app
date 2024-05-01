@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import styles from './Notification.module.css'
-import Context from '../../misc/Context'
+import {CONTEXT} from '../../misc/Context'
 const Notification = ({city ="Nanauta"}) => {
 
-  const {setNotification} = useContext(Context)
+  const {setNotification} = useContext(CONTEXT)
 
   return (
     <dialog className={styles.notification}>
