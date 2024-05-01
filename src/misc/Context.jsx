@@ -25,7 +25,17 @@ export default function ContextState({ children }) {
     const data = await fetchWeather(cityName);
     //console.log(data)
     if (data !== null) {
-      //data.then(d =>{ setWeatherData(d);console.log(d) })
+      if(localStorage.getItem("CITIES")) {
+        const values = JSON.parse(localStorage.getItem("CITIES"))
+        const isCityPresent = values.findIndex((d)=>d.toLowerCase()===cityName.toLowerCase());
+        if(isCityPresent === -1) {
+            values.push(cityName)
+        }
+        localStorage.setItem("CITIES", JSON.stringify(values))
+      } else {
+            //key creation
+            localStorage.setItem("CITIES", JSON.stringify([cityName]))
+      }
       setWeatherData(data);
     } else {
       //push notification
